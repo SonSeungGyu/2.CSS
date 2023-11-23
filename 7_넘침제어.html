@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .p{
+            width: 200px;
+            height: 150px;
+            background-color: royalblue;
+            margin: 20px;
+        }
+        .c{
+            width: 300px;
+            height: 100px;
+            background-color: orange;
+        }
+
+     
+        .p2{
+            overflow: hidden;
+            /* 부모보다 넘치는 자식요소를 잘라냄 */
+        }
+        .p3{
+            overflow: scroll;
+            /* 넘치는 부분을 잘라내고 스크롤바 생성 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="p p1">
+        <div class="c c1"></div>
+    </div>
+
+    <div class="p p2">
+        <div class="c c2"></div>
+    </div>
+
+    <div class="p p3">
+        <div class="c c3"></div>
+    </div>
+</body>
+
+</html>
