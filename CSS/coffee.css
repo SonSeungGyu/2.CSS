@@ -1,0 +1,32 @@
+header{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: antiquewhite;
+    
+    
+}
+
+header > .top{
+    position: absolute;
+    right:  30px;
+    padding-right: 30px;
+}
+
+
+ul{
+    list-style:  none;
+
+}
+
+.top{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu1{
+    display: flex;
+}
+.menu2{
+    display: flex;
+}

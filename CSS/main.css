@@ -1,0 +1,22 @@
+h1{
+    color: white;
+    background-color: black;
+    /* 가로의 길이가 컨텐츠만큼 줄어 들었음 */
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+li{
+    list-style: none;
+    color: blue;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+div{
+    border: 1px solid black;
+    padding: 10px;
+    width: 300px;
+}

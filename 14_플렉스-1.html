@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+        }
+
+        div{
+            width: 700px;
+            border: solid 1px black;
+            margin: 20px;
+            padding: 10px;
+        }
+
+        p{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        /* 자식 선택자 p1클래스의 p 태그에만 */
+        .p1 > p{
+            /* 단점 : 요소사이에, 공백이 발생  계산을 잘못하면 줄이 무너짐*/
+            display: inline-block;
+            /* 단점의 예시 */
+            margin: 0 30px;
+        }
+
+        /* 단점 : 부모가 자손의 높이를 인식하지 못함. 계산을 잘못하면 줄이 무너짐 */
+        .p2 > p{
+            float: left;
+            /* margin: 0 30px; */
+        }
+
+        /* 부모한테도 자식만큼의 높이를 주면 위 사항 해결 가능 */
+        .p2{
+            height: 100px;
+        }
+
+        .p3{
+            /* 정렬 생략시 디폴트 수평정렬*/
+            display: flex;
+        }
+
+        .p3 > p{
+            margin: 0 30px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h3>display: inline-block</h3>
+    <div class="p1">
+        <p>c1</p>
+        <p>c2</p>
+        <p>c3</p>
+        <p>c4</p>
+        <p>c5</p>
+    </div>
+
+    <h3>float: left</h3>
+    <div class="p2">
+        <p>c1</p>
+        <p>c2</p>
+        <p>c3</p>
+        <p>c4</p>
+        <p>c5</p>
+    </div>
+
+    <h3>display: flex</h3>
+    <div class="p3">
+        <p>c1</p>
+        <p>c2</p>
+        <p>c3</p>
+        <p>c4</p>
+        <p>c5</p>
+    </div>
+</body>
+
+</html>
