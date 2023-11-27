@@ -4,21 +4,28 @@
 
 
 /* -------Header---------- */
+
+
 header {
+    /* header의 높이와 너비를 지정 이때 너비를 100% 주면 화면에 가득 차게 됨. */
     height: 80px;
     width: 100%;
-    display: flex;
-    align-items: center;
     background-color: #F6F5F0;
     padding: 10px;
     border-bottom: 1px solid #c8c8c8;
-    /* position: fixed; */
-    top: 0;
+    /* header태그 아래에 자식 태그들을 수평 정렬해주기 위해 flex 선언 */
+    display: flex;
+    /* header내의 자손들을 보조축 방향으로 가운데 정렬 해줌. 
+    이때 flex 태그의 기본 정렬은 수평 정렬이기에 이에대한 보주축은 y축이 된다,
+    고로 수평정렬 상태에서의 align-item속성은 수직 정렬을 하게 되는것!!*/
+    align-items: center;
+    /* 뷰포트를 기준으로 이동함. 스크롤을 내리면 따라다님 */
     position: fixed;
-    
+
 
 }
 
+/* header를 기준(부모)를 기준으로 오른쪽에서 30px만큼 떨어뜨리고  오른쪽 내부 여백 30px 주기*/
 header>.top {
     position: absolute;
     right: 30px;
@@ -27,38 +34,41 @@ header>.top {
 
 
 ul {
+    /* 리스트 스타일이 없음 */
     list-style: none;
+    /* 수평 정렬을 위해 flex 선언 */
     display: flex;
 
 }
 
 li {
+    /* /리스트들 사이 간격을 주기 위함 */
     margin-left: 20px;
 
 }
 
 li>a {
+    /* li의 자식 a태그들의 폰트와 스타일 설정 */
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     color: gray;
     line-height: 2;
 }
 
-.top {
-    display: flex;
-    flex-direction: column;
-}
+
 
 
 
 /* ----   section   ----- */
 
 section {
+    /* 자손들을 수평 정렬 시키기 위해 flex 속성 이용 */
     display: flex;
-    align-items: center;
-    /* margin-top: 120px; */
     width: 100%;
     height: 800px;
+     /* 보조축을기준으로 가운데 정렬 */
+     align-items: center;
+    /* 주축을 기준으로 가운데 정렬 */
     justify-content: center;
     background-image: url("../images/bg.jpg");
 
@@ -72,21 +82,24 @@ section {
 
 .inner>div>img {
     margin: 10px;
-    /* height: 200; */
 }
 
-.inner>.cup1>a:hover{
+/* 이미지 클릭시 hover효과 */
+.inner>.cup1>a:hover {
+    margin: 15px;
+    /* 반응이 1초 동안 일어나게 되어 부드럽게 변환 가능 */
+    transition: 1s;
+
+}
+
+.inner>.cup2>a:hover {
     margin: 15px;
     transition: 1s;
 
 }
 
-.inner>.cup2>a:hover{
-    margin: 15px;
-    transition: 1s;
 
-}
-.inner>div{
+.inner>div {
     padding-top: 50px;
 }
 
@@ -99,7 +112,10 @@ footer {
     opacity: 0.7;
     height: 300px;
     display: flex;
+    /* footer내의 자손들을 수직 정렬하기 위한 속성 flex의 기본 정렬은 수평이나
+    방향을 column으로 주어 수직 정렬이 가능 */
     flex-direction: column;
+    /* 수직 수평 가운데 정렬을 위해 선언 */
     align-items: center;
     justify-content: center;
 
